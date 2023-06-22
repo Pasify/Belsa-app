@@ -1,0 +1,76 @@
+
+// colors using sass variables
+
+$primary:#4a97ff;
+$secondary:#00baff;
+$tertiary:#00d5f1;
+
+$grey1:#414656;
+$grey2:#a5abbd;
+$grey3:#f4f9ff;
+
+//////////////////media queries manager
+$bp-largest:75em;  //1200px : 1200px /16px
+$bp-large:68.75em; //1100px
+$bp-medium:56.25em; //900px
+$bp-small:37.5em; //600px
+$bp-smallest:31.25em; //500px
+
+:root{
+    
+    // custom css property for colors
+    --color-primary:#4a97ff;
+    --color-secondary:#00baff;
+    --color-tertiary:#00d5f1;
+
+    --light-grey-1:#faf9f9;
+    --light-grey-2:#f4f2f2;
+    --light-grey-3:#f0eeee;
+    --light-grey-4:#ccc;
+
+
+    --dark-grey-1:#333;
+    --dark-grey-2:#777;
+    --dark-grey-3:#999;
+
+    // box shadow
+    --shadow: 0 2rem 6rem rgba(0, 0, 0, .6)
+    --shadow1: 0 2rem 5rem rgba(0,0,0,0.06);
+
+    //border-bottom
+    --border:3px solid var(--light-grey-2);
+}
+
+
+// global reset///////
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+//////////////////////////
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;  //1rem ==10px. 10px /16px
+
+    @media only screen and (max-width:$bp-large){
+        font-size: 50%;
+    }
+}
+body{
+    font-family: "open sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    color:var(--dark-grey-2)
+}

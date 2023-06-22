@@ -1,0 +1,17 @@
+{
+  "name": "Belsa-project",
+  "version": "1.0.0",
+  "description": "Belsa Booking App",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w",
+    "devServer":"live-server",
+    "start":"npm-run-all --parallel devServer compile:sass"
+  },
+  "author": "Passkal",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.54.5"
+  }
+}

@@ -1,0 +1,36 @@
+// media query manger
+
+// @mixin respond-phone {
+//    @media  (max-width: $bp-largest) {
+//     @content    
+//     }
+// }
+
+/*
+break point argument chioces
+ *phone 
+ *tab-port 
+ *tab- land 
+ *desk
+*/ 
+@mixin adjust($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) { @content;}
+    }
+    @if $breakpoint == tab-port {
+        @media(max-width: 900px){
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media(max-width: 1200px){
+            @content;
+        }
+    }
+    @if $breakpoint == desk {
+        @media(min-width: 1800px){
+            @content;
+        }
+    }
+    
+}
